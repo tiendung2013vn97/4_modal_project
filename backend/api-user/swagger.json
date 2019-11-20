@@ -1,0 +1,102 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0.0",
+      "license": {
+        "name": "MIT",
+        "url": "https://opensource.org/licenses/MIT"
+      }
+    },
+    "host": "localhost:3001",
+    "tags": [
+      {
+        "name": "users",
+        "description": "API for users in the system"
+      }
+    ],
+    "schemes": [
+      "http"
+    ],
+    "consumes": [
+      "application/json"
+    ],
+    "produces": [
+      "application/json"
+    ],
+    "paths": {
+        "/user/register":{
+            "post":{
+                "parameters":[{
+                  "in":"body",
+                  "name":"user",
+                  "schema":{
+                    "type":"object",
+                    "properties":{
+                      "username":{
+                        "type":"string",
+                        "example":"abc"
+                      },
+                      "password":{
+                        "type":"string",
+                        "example":"123"
+                      },
+                      "fullname":{
+                        "type":"string",
+                        "example":"Nguyên Dũng"
+                      },
+                      "email":{
+                        "type":"string",
+                        "example":"abc@gmail.com"
+                      },
+                      "age":{
+                        "type":"integer",
+                        "example":22
+                      },
+                      "gender":{
+                        "type":"string",
+                        "example":"nam"
+                      }
+                    }
+                  }
+                  } ],
+                "responses":{
+                    "200":{
+                        "description": "User is found"
+                    },
+                    "500":{
+                        "description": "No user"
+                    }
+                }
+            }
+        },
+        "/user/login":{
+          "post":{
+              "parameters":[{
+                "in":"body",
+                "name":"user",
+                "schema":{
+                  "type":"object",
+                  "properties":{
+                    "username":{
+                      "type":"string",
+                      "example":"abc"
+                    },
+                    "password":{
+                      "type":"string",
+                      "example":"123"
+                    }
+                  }
+                }
+                } ],
+              "responses":{
+                  "200":{
+                      "description": "User is found"
+                  },
+                  "500":{
+                      "description": "No user"
+                  }
+              }
+          }
+      }
+    }
+  }

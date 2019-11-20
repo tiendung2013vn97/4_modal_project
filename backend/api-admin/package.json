@@ -1,0 +1,23 @@
+{
+  "name": "api-admin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "set PORT=3002 && node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cookie-parser": "~1.4.4",
+    "express": "~4.16.1",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "~1.9.1",
+    "mysql": "^2.17.1"
+  },
+  "dependencies": {
+    "swagger": "^0.7.5",
+    "swagger-ui-express": "^4.1.2"
+  }
+}
